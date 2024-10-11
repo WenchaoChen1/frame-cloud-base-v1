@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <name>GstDev Cloud :: Starters :: Storage</name>
+  <description>${project.name}</description>
+  <artifactId>gstdev-cloud-starter-storage</artifactId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.gstdev.cloud</groupId>
+    <artifactId>gstdev-cloud-starters</artifactId>
+    <version>2022.0.2-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <properties>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+  </properties>
+
+  <modules>
+    <module>gstdev-cloud-starter-storage-core</module>
+    <module>gstdev-cloud-starter-storage-minio</module>
+    <module>gstdev-cloud-starter-storage-aliyun</module>
+    <module>gstdev-cloud-starter-storage-huawei</module>
+    <module>gstdev-cloud-starter-storage-aws</module>
+  </modules>
+
+</project>

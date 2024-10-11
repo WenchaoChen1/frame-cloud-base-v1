@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <name>GstDev Cloud :: Project</name>
+  <description>${project.name}</description>
+
+  <groupId>com.gstdev.cloud</groupId>
+  <artifactId>gstdev-cloud-project</artifactId>
+  <version>2022.0.2-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <developers>
+    <developer>
+      <id>bijiasuo2006</id>
+      <name>Yongjie Liu</name>
+      <organization>GstDev Cloud</organization>
+      <organizationUrl>http://gstdev.com</organizationUrl>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache v2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <url/>
+  </scm>
+
+  <organization>
+    <name>GstDev Cloud</name>
+    <url>http://gstdev.com</url>
+  </organization>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.7</version>
+        <configuration>
+          <generateBackupPoms>false</generateBackupPoms>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <modules>
+    <module>gstdev-cloud-commons</module>
+    <!--    <module>gstdev-cloud-components</module>-->
+    <module>gstdev-cloud-data</module>
+    <module>gstdev-cloud-dependencies</module>
+    <!--    <module>gstdev-cloud-engines</module>-->
+    <module>gstdev-cloud-oauth2</module>
+    <module>gstdev-cloud-parent</module>
+    <!--    <module>gstdev-cloud-platforms</module>-->
+    <!--    <module>gstdev-cloud-plugins</module>-->
+    <module>gstdev-cloud-services</module>
+    <module>gstdev-cloud-starters</module>
+    <module>gstdev-cloud-web</module>
+    <module>gstdev-cloud-plugins</module>
+  </modules>
+
+  <pluginRepositories></pluginRepositories>
+
+  <!--仓库路径 -->
+  <repositories>
+    <repository>
+      <id>maven-public</id>
+      <name>Public Repository</name>
+      <url>https://nexus.veritypay.com/repository/maven-public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <distributionManagement>
+    <!--正式版本-->
+    <repository>
+      <!--必须与 settings.xml 的 id 一致-->
+      <id>veritypay-repository-maven</id>
+      <name>Veritypay Maven Releases Repository</name>
+      <url>https://nexus.veritypay.com/repository/maven-releases/</url>
+    </repository>
+    <!--快照-->
+    <snapshotRepository>
+      <id>veritypay-repository-maven-snapshots</id>
+      <name>Veritypay Maven Snapshot Repository</name>
+      <url>https://nexus.veritypay.com/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+</project>

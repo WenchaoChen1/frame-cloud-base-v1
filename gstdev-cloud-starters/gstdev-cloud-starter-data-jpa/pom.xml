@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <name>GstDev Cloud :: Starter :: Data :: JPA</name>
+  <description>${project.name}</description>
+
+  <artifactId>gstdev-cloud-starter-data-jpa</artifactId>
+
+  <parent>
+    <groupId>com.gstdev.cloud</groupId>
+    <artifactId>gstdev-cloud-starters</artifactId>
+    <version>2022.0.2-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <dependencies>
+    <!-- RichingCloud related dependencies -->
+    <dependency>
+      <groupId>com.gstdev.cloud</groupId>
+      <artifactId>gstdev-cloud-data-jpa</artifactId>
+    </dependency>
+    <!-- ShardingSphere related dependencies -->
+<!--    <dependency>-->
+<!--      <groupId>org.apache.shardingsphere</groupId>-->
+<!--      <artifactId>shardingsphere-jdbc-core-spring-boot-starter</artifactId>-->
+<!--    </dependency>-->
+    <!-- PostgreSQL related dependencies -->
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <!-- MySQL related dependencies -->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+</project>

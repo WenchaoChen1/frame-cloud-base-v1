@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <name>GstDev Cloud :: Plugins</name>
+  <description>${project.name}</description>
+
+  <artifactId>gstdev-cloud-plugins</artifactId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.gstdev.cloud</groupId>
+    <artifactId>gstdev-cloud-parent</artifactId>
+    <version>2022.0.2-SNAPSHOT</version>
+    <relativePath>../gstdev-cloud-parent</relativePath>
+  </parent>
+  <modules>
+    <module>gstdev-cloud-plugin-swagger</module>
+    <module>gstdev-cloud-plugin-storage</module>
+  </modules>
+</project>

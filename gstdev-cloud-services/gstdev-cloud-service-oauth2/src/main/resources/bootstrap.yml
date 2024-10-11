@@ -1,0 +1,24 @@
+# ====================================================
+#
+# This file is part of the Riching Cloud Platform.
+#
+# Create by Riching Cloud <support@richingcloud.com>
+# Copyright (c) 2020-2025 richingcloud.com
+#
+# ====================================================
+
+spring:
+  application:
+    name: @artifactId@
+  profiles:
+    active: @profile.name@
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+gstdev:
+  cloud:
+    security:
+      oauth2:
+        issuer-uri: http://127.0.0.1:8080

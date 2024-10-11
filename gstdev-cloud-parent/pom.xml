@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <name>GstDev Cloud :: Parent</name>
+  <description>${project.name}</description>
+
+  <artifactId>gstdev-cloud-parent</artifactId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.gstdev.cloud</groupId>
+    <artifactId>gstdev-cloud-dependencies</artifactId>
+    <version>2022.0.2-SNAPSHOT</version>
+    <relativePath>../gstdev-cloud-dependencies</relativePath>
+  </parent>
+
+  <profiles>
+    <profile>
+      <id>development</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <profile.name>development</profile.name>
+        <config.namespace>riching-cloud-development</config.namespace>
+        <config.server-addr>127.0.0.1:8848</config.server-addr>
+        <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>
+        <sentinel.server-addr>127.0.0.1:8858</sentinel.server-addr>
+      </properties>
+    </profile>
+    <profile>
+      <id>production</id>
+      <properties>
+        <profile.name>production</profile.name>
+        <config.namespace>riching-cloud-production</config.namespace>
+        <config.server-addr>127.0.0.1:8848</config.server-addr>
+        <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>
+        <sentinel.server-addr>127.0.0.1:8858</sentinel.server-addr>
+      </properties>
+    </profile>
+    <profile>
+      <id>docker</id>
+      <properties>
+        <profile.name>docker</profile.name>
+        <config.namespace>riching-cloud-docker</config.namespace>
+        <config.server-addr>127.0.0.1:8848</config.server-addr>
+        <discovery.server-addr>127.0.0.1:8848</discovery.server-addr>
+        <sentinel.server-addr>127.0.0.1:8858</sentinel.server-addr>
+      </properties>
+    </profile>
+  </profiles>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+      </plugin>
+    </plugins>
+  </build>
+</project>

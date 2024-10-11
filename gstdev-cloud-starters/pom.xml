@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <name>GstDev Cloud :: Starters</name>
+  <description>${project.name}</description>
+
+  <artifactId>gstdev-cloud-starters</artifactId>
+  <packaging>pom</packaging>
+
+  <parent>
+    <groupId>com.gstdev.cloud</groupId>
+    <artifactId>gstdev-cloud-parent</artifactId>
+    <version>2022.0.2-SNAPSHOT</version>
+    <relativePath>../gstdev-cloud-parent</relativePath>
+  </parent>
+
+  <modules>
+    <module>gstdev-cloud-starter-data-commons</module>
+    <module>gstdev-cloud-starter-data-jpa</module>
+    <module>gstdev-cloud-starter-data-redis</module>
+    <module>gstdev-cloud-starter-web</module>
+    <module>gstdev-cloud-starter-swagger</module>
+    <module>gstdev-cloud-starter-storage</module>
+  </modules>
+</project>
